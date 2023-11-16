@@ -48,7 +48,7 @@ fun GreetingText(from: String ,message: String, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier.padding(8.dp),
         verticalArrangement = Arrangement.Center,
-        ) {
+    ) {
         Text(
             text = message,
             fontSize = 100.sp,
@@ -84,32 +84,50 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
     }
 }
 
-@Preview(showBackground = true)
+/*@Preview(showBackground = true)
 @Composable
 fun BirthdayCardPreview() {
     HappyBirthdayTheme {
-       //GreetingText(message = "Happy Birthday PH!", from ="From Paulo")
+        //GreetingText(message = "Happy Birthday PH!", from ="From Paulo")
         GreetingImage(
             stringResource(R.string.happy_birthday_text),
             stringResource(R.string.signature_text),
         )
     }
-}
+}*/
 
 @Composable
 fun  LearnTogether(){
     val image = painterResource(R.drawable.bg_compose_background)
+
     Column {
         Image(
             painter = image,
-            contentDescription = null
+            contentDescription = null,
         )
-
+        Text(
+            text = stringResource(R.string.jetpack_compose_tutorial),
+            fontSize = 24.sp,
+            modifier = Modifier
+                .padding(top=16.dp, bottom = 16.dp)
+        )
+        Text(
+            text = stringResource(R.string.jetpack_compose_is),
+            modifier = Modifier
+                .padding(top=16.dp, bottom = 16.dp)
+            )
+        Text(
+            text = stringResource(R.string.text_tutorial),
+            textAlign = TextAlign.Justify,
+            modifier = Modifier
+                .padding(top=16.dp, bottom = 16.dp)
+            )
     }
 }
 
-@Preview(showBackground = true)
+/*@Preview(showBackground = true)
 @Composable
 fun  LearnTogetherPreview(){
     LearnTogether()
-}
+}*/
+
